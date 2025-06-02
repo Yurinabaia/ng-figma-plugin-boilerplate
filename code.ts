@@ -12,6 +12,7 @@ figma.ui.onmessage = msg => {
     // One way of distinguishing between different types of messages sent from
     // your HTML page is to use an object with a "type" property like this.
     if (msg.type === 'create-rectangles') {
+        console.log('Creating rectangles:', msg.count);
         const nodes = [];
         for (let i = 0; i < msg.count; i++) {
             const rect = figma.createRectangle();
@@ -22,8 +23,6 @@ figma.ui.onmessage = msg => {
         }
         figma.currentPage.selection = nodes;
         figma.viewport.scrollAndZoomIntoView(nodes);
+        figma.ui.postMessage({ type: 'selection-changed', teste: 'Ola mundo' });
     }
-    // Make sure to close the plugin when you're done. Otherwise the plugin will
-    // keep running, which shows the cancel button at the bottom of the screen.
-    figma.closePlugin();
 };
