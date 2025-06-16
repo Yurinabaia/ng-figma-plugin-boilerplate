@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    background: #363636;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+
+/* Top Navbar */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #252525;
+    padding: 12px 16px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #111;
+    object-fit: cover;
+}
+
+.free-btn {
+    border: 2px solid #fff;
+    border-radius: 8px;
+    padding: 4px 16px;
+    background: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.points {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #1ab1e4;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.upgrade-btn {
+    border: 2px solid #1ab1e4;
+    color: #1ab1e4;
+    background: none;
+    border-radius: 8px;
+    padding: 4px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Secondary bar */
+.secondary-bar {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    background: #323232;
+    padding: 18px 32px;
+    font-size: 20px;
+}
+
+.secondary-bar .selected {
+    color: #fff;
+    margin-right: 8px;
+}
+
+.secondary-bar .frame-link {
+    color: #1ab1e4;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.select-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.select-btn {
+    background: #1ab1e4;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    cursor: pointer;
+    gap: 6px;
+}
+
+.options-select {
+    background: #232323;
+    color: #fff;
+    border-radius: 8px;
+    padding: 0 10px;
+    font-size: 18px;
+    border: none;
+    height: 38px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Main Frame */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    margin-top: 24px;
+}
+
+.frame-print {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    max-width: 600px;
+    height: 70vh;
+    max-height: 600px;
+    border: 4px dashed #1ab1e4;
+    border-radius: 36px;
+    margin-bottom: 32px;
+    background: none;
+    color: #fff;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Converter Button */
+.convert-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1ab1e4;
+    color: #fff;
+    border: none;
+    border-radius: 28px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 17px 44px;
+    cursor: pointer;
+    gap: 12px;
+    min-width: 330px;
+    transition: filter .2s;
+}
+
+.convert-btn:hover {
+    filter: brightness(0.92);
+}
+
+.icon-sparkle {
+    width: 28px;
+    height: 28px;
+    margin-right: 4px;
+}
+
+@media (max-width: 700px) {
+    .frame-print {
+        width: 95vw;
+        height: 60vw;
+        max-width: none;
+        max-height: 340px;
+        font-size: 1.3rem;
+    }
+
+    .convert-btn {
+        min-width: 0;
+        width: 90vw;
+        font-size: 1.05rem;
+        padding: 14px;
+    }
+}

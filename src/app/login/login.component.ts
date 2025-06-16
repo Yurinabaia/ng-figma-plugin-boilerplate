@@ -15,7 +15,7 @@ export class LoginComponent {
   loginWithGoogle() {
     // Simular login com Google
     console.log('Login with Google');
-    this.router.navigate(['/home']);
+    this.router.navigate(['/code-generator']);
   }
 
   loginWithGithub() {
