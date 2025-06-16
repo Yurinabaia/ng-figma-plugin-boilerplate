@@ -1,10 +1,12 @@
 {
   "name": "Angular Plugin Boilerplate",
-  "id": "1173621087593337844",
+  "id": "1513898812962536128",
   "api": "1.0.0",
   "main": "dist/code.js",
   "editorType": [
     "figma"
   ],
-  "ui": "dist/ui.html"
+  "ui": "dist/ui.html",
+  "networkAccess": { "allowedDomains": ["none"] },
+  "documentAccess": "dynamic-page"
 }
