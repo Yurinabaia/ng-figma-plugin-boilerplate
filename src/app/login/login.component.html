@@ -20,14 +20,13 @@
     </svg>
     <div class="subtitle">
         Boost your UI development efficiency by 10X
-    </div>
-    <button class="login-btn login-google">
+    </div>    <button class="login-btn login-google" (click)="loginWithGoogle()">
         <i class="fab fa-google"></i> Continue with Google
     </button>
-    <button class="login-btn login-github">
+    <button class="login-btn login-github" (click)="loginWithGithub()">
         <i class="fab fa-github"></i> Continue with Github
     </button>
-    <button class="login-btn login-email">
+    <button class="login-btn login-email" (click)="loginWithEmail()">
         <i class="fa-regular fa-at"></i> Continue with Email
     </button>
     <div class="terms">
