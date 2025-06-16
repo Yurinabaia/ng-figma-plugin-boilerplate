@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private router: Router) {}
+  constructor(private readonly router: Router) {}
 
   loginWithGoogle() {
     // Simular login com Google
