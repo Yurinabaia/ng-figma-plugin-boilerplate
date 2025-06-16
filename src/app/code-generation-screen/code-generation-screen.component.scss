@@ -149,21 +149,19 @@ body {
 }
 
 .copy-btn {
-  flex: 1;
-  max-width: 410px;
+  margin: 0 auto 16px;
+  display: block;
+  width: 410px;
   background: #0891c7;
   color: #fff;
   border-radius: 30px;
   border: none;
   font-size: 28px;
   font-weight: 600;
-  padding: 22px 24px;
+  padding: 22px 0;
   cursor: pointer;
-  transition: background 0.2s ease;
-  height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 24px;
+  transition: background 0.2s;
 }
 
 .copy-btn:hover {
@@ -171,20 +169,12 @@ body {
 }
 
 @media (max-width: 800px) {
-  .container {
-    align-items: stretch;
-  }
-
+  .container { align-items: stretch;}
   .topbar,
   .subbar,
   .editor-tabs,
-  .editor-area {
-    width: 98vw;
-  }
-
-  .copy-btn {
-    width: 95vw;
-  }
+  .editor-area { width: 98vw;}
+  .copy-btn { width: 95vw;}
 }
 
 // ...existing code...
@@ -217,22 +207,15 @@ body {
 }
 
 @media (max-width: 800px) {
-  .container {
-    align-items: stretch;
-  }
-
+  .container { align-items: stretch;}
   .topbar,
   .subbar,
   .editor-tabs,
-  .editor-area {
-    width: 98vw;
-  }
-
-  .copy-btn {
+  .editor-area { width: 98vw;}
+  .copy-btn { 
     width: 95vw;
     max-width: none;
   }
-
   .action-btn {
     width: 60px;
     height: 60px;
