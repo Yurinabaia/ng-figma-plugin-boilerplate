@@ -1,303 +1,234 @@
 body {
+
   margin: 0;
   font-family: 'Inter', 'Arial', sans-serif;
   background: #333;
   color: #fff;
 }
-
 .container {
-  width: 100vw;
-  height: 100vh;
-  background: #333;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  width: 100%;
+  min-width: 320px; /* Largura mínima para mobile */
 }
 
+/* Subbar responsiva */
 .subbar {
-  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #373737;
-  padding: 12px 32px 12px 32px;
-  box-sizing: border-box;
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .selected {
-  font-size: 20px;
-  color: #ddd;
+  font-size: 14px;
+  min-width: 0; /* Permite truncamento */
 }
 
 .frame-link {
-  color: #44aaff;
-  cursor: pointer;
+  color: #0066cc;
+  font-weight: 500;
 }
 
 .edit-options {
   display: flex;
-  gap: 14px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .editor-btn {
-  background: #232323;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 5px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  font-size: 12px;
   cursor: pointer;
-}
-
-.editor-tabs {
-  display: flex;
-  gap: 16px;
-  margin: 22px 0 0 0;
-  width: 93vw;
-  justify-content: flex-start;
-  overflow-x: auto;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-
-.tab {
-  background: #1a1a1a;
-  padding: 14px 32px 10px 22px;
-  border-radius: 10px 10px 0 0;
-  font-size: 24px;
-  font-weight: 500;
-  color: #fff;
-  min-width: 195px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
   white-space: nowrap;
 }
 
+/* Tabs responsivas */
+.editor-tabs {
+  display: flex;
+  background: #e9e9e9;
+  border-bottom: 1px solid #ccc;
+  overflow-x: auto; /* Permite scroll horizontal em telas pequenas */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.editor-tabs::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.tab {
+  padding: 12px 20px;
+  background: white;
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.tab:hover {
+  background: #f0f0f0;
+}
+
+/* Editor area responsiva */
 .editor-area {
-  background: #181818;
-  width: 93vw;
-  height: 57vh;
-  min-height: 330px;
-  border-radius: 16px;
-  margin: 0 auto 42px auto;
-  box-sizing: border-box;
-  padding: 0;
+  flex: 1;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  overflow: auto;
+  min-height: 200px;
+}
+
+/* Bottom actions responsivas */
+.bottom-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  border-top: 1px solid #ddd;
+  gap: 8px;
 }
 
 .copy-btn {
-  margin: 0 auto 16px;
-  display: block;
-  width: 410px;
-  max-width: 90vw;
-  background: #0891c7;
-  color: #fff;
-  border-radius: 30px;
+  background: #0066cc;
+  color: white;
   border: none;
-  font-size: 28px;
-  font-weight: 600;
-  padding: 22px 0;
+  padding: 8px 16px;
+  border-radius: 4px;
   cursor: pointer;
-  margin-top: 24px;
-  transition: background 0.2s;
-}
-
-.copy-btn:hover {
-  background: #0771a3;
-}
-
-.bottom-actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 16px;
-  width: 93vw;
-  max-width: 600px;
+  font-weight: 500;
+  flex-shrink: 0;
 }
 
 .action-btn {
-  background: #4a4a4a;
-  border: none;
-  border-radius: 8px;
-  padding: 22px 12px;
-  color: #fff;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.2s ease;
-  width: 68px;
-  height: 68px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
 }
 
-.action-btn:hover {
-  background: #5a5a5a;
-}
-
-/* Tablet responsiveness */
-@media (max-width: 1024px) {
-  .subbar {
-    padding: 12px 20px;
-  }
-  
-  .editor-tabs {
-    width: 95vw;
-    padding: 0 12px;
-  }
-  
-  .editor-area {
-    width: 95vw;
-  }
-  
-  .bottom-actions {
-    width: 95vw;
-  }
-  
-  .tab {
-    min-width: 160px;
-    font-size: 22px;
-    padding: 12px 24px 8px 18px;
-  }
-}
-
-/* Mobile responsiveness */
-@media (max-width: 800px) {
-  .container { 
-    align-items: stretch;
-  }
-  
+/* Media queries para responsividade */
+@media (max-width: 768px) {
   .subbar {
     flex-direction: column;
+    align-items: stretch;
     gap: 12px;
-    padding: 16px 20px;
-    align-items: flex-start;
   }
   
   .selected {
-    font-size: 18px;
+    text-align: center;
   }
   
   .edit-options {
-    width: 100%;
-    justify-content: space-between;
-    gap: 10px;
+    justify-content: center;
   }
   
   .editor-btn {
     flex: 1;
-    justify-content: center;
-    font-size: 16px;
-    padding: 8px 12px;
-  }
-  
-  .editor-tabs {
-    width: 98vw;
-    padding: 0 8px;
-    gap: 12px;
+    max-width: 120px;
   }
   
   .tab {
-    min-width: 140px;
-    font-size: 20px;
-    padding: 10px 20px 8px 16px;
-  }
-  
-  .editor-area { 
-    width: 98vw;
-    height: 50vh;
-    min-height: 280px;
-  }
-  
-  .copy-btn { 
-    width: 95vw;
-    max-width: none;
-    font-size: 24px;
-    padding: 18px 0;
-  }
-  
-  .bottom-actions {
-    width: 95vw;
-    max-width: none;
-  }
-  
-  .action-btn {
-    width: 60px;
-    height: 60px;
-    padding: 18px 10px;
-    font-size: 18px;
-  }
-}
-
-/* Small mobile responsiveness */
-@media (max-width: 480px) {
-  .subbar {
-    padding: 12px 16px;
-  }
-  
-  .selected {
-    font-size: 16px;
-  }
-  
-  .editor-btn {
-    font-size: 14px;
-    padding: 6px 10px;
-  }
-  
-  .editor-tabs {
-    gap: 8px;
-    padding: 0 6px;
-  }
-  
-  .tab {
-    min-width: 120px;
-    font-size: 18px;
-    padding: 8px 16px 6px 12px;
+    padding: 10px 16px;
+    font-size: 13px;
   }
   
   .editor-area {
-    height: 45vh;
-    min-height: 250px;
-  }
-  
-  .copy-btn {
-    font-size: 20px;
-    padding: 16px 0;
-  }
-  
-  .action-btn {
-    width: 50px;
-    height: 50px;
-    padding: 15px 8px;
-    font-size: 16px;
+    padding: 12px;
   }
   
   .bottom-actions {
-    gap: 12px;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 320px) {
-  .tab {
-    min-width: 100px;
-    font-size: 16px;
-    padding: 6px 12px 4px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   
   .copy-btn {
-    font-size: 18px;
+    order: -1;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    min-width: 280px;
+  }
+  
+  .subbar {
+    padding: 6px 12px;
+  }
+  
+  .editor-btn {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .editor-area {
+    padding: 8px;
+    font-size: 12px;
+  }
+  
+  .bottom-actions {
+    padding: 8px 12px;
   }
   
   .action-btn {
-    width: 45px;
-    height: 45px;
-    font-size: 14px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Melhorias para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .subbar, .bottom-actions {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #ffffff;
+  }
+  
+  .editor-btn, .action-btn {
+    background: #404040;
+    border-color: #555;
+    color: #ffffff;
+  }
+  
+  .editor-tabs {
+    background: #363636;
+  }
+  
+  .tab {
+    background: #404040;
+    border-color: #555;
+    color: #ffffff;
   }
 }
