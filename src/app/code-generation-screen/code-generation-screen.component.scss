@@ -59,6 +59,9 @@ body {
   margin: 22px 0 0 0;
   width: 93vw;
   justify-content: flex-start;
+  overflow-x: auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .tab {
@@ -73,6 +76,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  white-space: nowrap;
 }
 
 .editor-area {
@@ -90,6 +94,7 @@ body {
   margin: 0 auto 16px;
   display: block;
   width: 410px;
+  max-width: 90vw;
   background: #0891c7;
   color: #fff;
   border-radius: 30px;
@@ -106,22 +111,14 @@ body {
   background: #0771a3;
 }
 
-@media (max-width: 800px) {
-  .container { align-items: stretch;}
-  .topbar,
-  .subbar,
-  .editor-tabs,
-  .editor-area { width: 98vw;}
-  .copy-btn { width: 95vw;}
-}
-
-// ...existing code...
 .bottom-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
   margin-top: 16px;
+  width: 93vw;
+  max-width: 600px;
 }
 
 .action-btn {
@@ -144,19 +141,163 @@ body {
   background: #5a5a5a;
 }
 
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .subbar {
+    padding: 12px 20px;
+  }
+  
+  .editor-tabs {
+    width: 95vw;
+    padding: 0 12px;
+  }
+  
+  .editor-area {
+    width: 95vw;
+  }
+  
+  .bottom-actions {
+    width: 95vw;
+  }
+  
+  .tab {
+    min-width: 160px;
+    font-size: 22px;
+    padding: 12px 24px 8px 18px;
+  }
+}
+
+/* Mobile responsiveness */
 @media (max-width: 800px) {
-  .container { align-items: stretch;}
-  .topbar,
-  .subbar,
-  .editor-tabs,
-  .editor-area { width: 98vw;}
+  .container { 
+    align-items: stretch;
+  }
+  
+  .subbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+    align-items: flex-start;
+  }
+  
+  .selected {
+    font-size: 18px;
+  }
+  
+  .edit-options {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .editor-btn {
+    flex: 1;
+    justify-content: center;
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+  
+  .editor-tabs {
+    width: 98vw;
+    padding: 0 8px;
+    gap: 12px;
+  }
+  
+  .tab {
+    min-width: 140px;
+    font-size: 20px;
+    padding: 10px 20px 8px 16px;
+  }
+  
+  .editor-area { 
+    width: 98vw;
+    height: 50vh;
+    min-height: 280px;
+  }
+  
   .copy-btn { 
     width: 95vw;
     max-width: none;
+    font-size: 24px;
+    padding: 18px 0;
   }
+  
+  .bottom-actions {
+    width: 95vw;
+    max-width: none;
+  }
+  
   .action-btn {
     width: 60px;
     height: 60px;
     padding: 18px 10px;
+    font-size: 18px;
+  }
+}
+
+/* Small mobile responsiveness */
+@media (max-width: 480px) {
+  .subbar {
+    padding: 12px 16px;
+  }
+  
+  .selected {
+    font-size: 16px;
+  }
+  
+  .editor-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  
+  .editor-tabs {
+    gap: 8px;
+    padding: 0 6px;
+  }
+  
+  .tab {
+    min-width: 120px;
+    font-size: 18px;
+    padding: 8px 16px 6px 12px;
+  }
+  
+  .editor-area {
+    height: 45vh;
+    min-height: 250px;
+  }
+  
+  .copy-btn {
+    font-size: 20px;
+    padding: 16px 0;
+  }
+  
+  .action-btn {
+    width: 50px;
+    height: 50px;
+    padding: 15px 8px;
+    font-size: 16px;
+  }
+  
+  .bottom-actions {
+    gap: 12px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .tab {
+    min-width: 100px;
+    font-size: 16px;
+    padding: 6px 12px 4px 10px;
+  }
+  
+  .copy-btn {
+    font-size: 18px;
+  }
+  
+  .action-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
   }
 }
