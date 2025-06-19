@@ -14,68 +14,6 @@ body {
   align-items: center;
 }
 
-.topbar {
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #2c2c2c;
-  padding: 16px 32px 8px 24px;
-  box-sizing: border-box;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #121212 url('https://i.pravatar.cc/40') center/cover;
-}
-
-.free-btn {
-  background: none;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  font-size: 18px;
-  padding: 4px 18px;
-  color: #fff;
-  cursor: default;
-}
-
-.actions {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.credits {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #09a4dc;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.upgrade-btn {
-  background: none;
-  border: 2px solid #09a4dc;
-  border-radius: 10px;
-  color: #09a4dc;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 4px 18px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .subbar {
   width: 100vw;
   display: flex;
